@@ -20,21 +20,21 @@ This project follows a clean Maven structure and organizes problems by topic:
 src/
 ├── main/java/dsa/exercises/
 │   ├── arrays/
-│   │   ├── IsUnique.java
 │   │   ├── LargestElement.java
 │   │
 │   ├── strings/
-│   │   ├── CheckPermutation.java
+│   │   ├── StringIsPermutation.java
+│   │   ├── HasUniqueChars.java
 │   │
 │   └── (more ...)
 │
 ├── test/java/dsa/exercises/
 │   ├── arrays/
-│   │   ├── IsUniqueTest.java
 │   │   ├── LargestElementTest.java
 │   │
 │   ├── strings/
-│   │   ├── CheckPermutationTest.java
+│   │   ├── HasUniqueCharsTest.java
+│   │   ├── StringIsPermutationTest.java
 ```
 
 ---
