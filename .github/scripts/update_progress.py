@@ -16,13 +16,16 @@ def count_problems():
     counts = {}
     for folder, name in TOPICS.items():
         path = os.path.join(BASE_DIR, folder)
+        count = 0
         if os.path.exists(path):
-            counts[name] = len([
-                f for f in os.listdir(path)
-                if f.endswith(".java")
-            ])
-        else:
-            counts[name] = 0
+            for filename in os.listdir(path):
+                if filename.endswith(".java"):
+                    filepath = os.path.join(path, filename)
+                    with open(filepath, "r", encoding="utf-8") as f:
+                        content = f.read()
+                        if "@exercise" in content:
+                            count += 1
+        counts[name] = count
     return counts
 
 def generate_table(counts):
@@ -36,7 +39,7 @@ def generate_table(counts):
     return "\n".join(lines)
 
 def update_readme(table):
-    with open("README.md", "r") as f:
+    with open("README.md", "r", encoding="utf-8") as f:
         content = f.read()
 
     start = "<!-- START_PROGRESS -->"
@@ -47,7 +50,7 @@ def update_readme(table):
 
     new_content = f"{before}{start}\n{table}\n{end}{after}"
 
-    with open("README.md", "w") as f:
+    with open("README.md", "w", encoding="utf-8") as f:
         f.write(new_content)
 
 if __name__ == "__main__":
