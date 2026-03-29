@@ -19,7 +19,7 @@ class HasUniqueCharsTest {
     @MethodSource("hasUniqueCharsTestCases")
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
     void testHasUniqueChars1(String input, boolean expected) {
-        assertEquals(expected, uniqueChars.hasUniqueChars1(input),
+        assertEquals(expected, uniqueChars.hasUniqueChars(input),
                 "Failed for input: " + input);
     }
 
@@ -27,7 +27,7 @@ class HasUniqueCharsTest {
     @MethodSource("hasUniqueCharsTestCases")
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
     void testHasUniqueChars2(String input, boolean expected) {
-        assertEquals(expected, uniqueChars.hasUniqueChars2(input),
+        assertEquals(expected, uniqueChars.hasUniqueChars1(input),
                 "Failed for input: " + input);
     }
 

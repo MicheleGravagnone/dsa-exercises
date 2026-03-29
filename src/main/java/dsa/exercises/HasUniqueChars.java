@@ -10,7 +10,7 @@ import java.util.*;
 
 public class HasUniqueChars {
 
-    public boolean hasUniqueChars1 (String s) {
+    public boolean hasUniqueChars (String s) {
         Set<Character> charSet = new HashSet<>();
         for (char c : s.toCharArray()) {
             if (charSet.contains(c)) return false;
@@ -23,7 +23,7 @@ public class HasUniqueChars {
     }
 
     // Assuming ASCII lowercase letters a-z
-    public boolean hasUniqueChars2 (String s) {
+    public boolean hasUniqueChars1 (String s) {
         int checker = 0;
         for (int i = 0; i < s.length(); i++) {
             int val = s.charAt(i) - 'a';
