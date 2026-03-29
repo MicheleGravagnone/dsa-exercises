@@ -1,6 +1,5 @@
 package dsa.exercises;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -11,15 +10,15 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SolutionTest {
+class LargestElementTest {
 
-    private final Solution sol = new Solution();
+    private final LargestElement largestElement = new LargestElement();
 
     @ParameterizedTest(name = "Run {index}: input={0}, expected={1}")
     @MethodSource("secondLargestTestCases")
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
     void testSecondLargestElement(int[] input, int expected) {
-        assertEquals(expected, sol.secondLargestElement(input),
+        assertEquals(expected, largestElement.secondLargestElement(input),
                 "Failed for input: " + java.util.Arrays.toString(input));
     }
 
@@ -27,7 +26,7 @@ class SolutionTest {
     @MethodSource("thirdLargestTestCases")
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
     void testThirdLargestElement(int[] input, int expected) {
-        assertEquals(expected, sol.thirdLargestElement(input),
+        assertEquals(expected, largestElement.thirdLargestElement(input),
                 "Failed for input: " + java.util.Arrays.toString(input));
     }
 
