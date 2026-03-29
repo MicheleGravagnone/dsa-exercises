@@ -17,7 +17,7 @@ class StringIsPermutationTest {
     @ParameterizedTest(name = "Run {index}: input={0}, expected={1}")
     @MethodSource("stringIsPermutationTestCases")
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
-    void testHasUniqueChars1(String input1, String input2, boolean expected) {
+    void testStringIsPermutation(String input1, String input2, boolean expected) {
         assertEquals(expected, isPermutation.stringIsPermutation(input1, input2),
                 "Failed for input: " + input1 + ", " + input2);
     }
@@ -25,9 +25,17 @@ class StringIsPermutationTest {
     @ParameterizedTest(name = "Run {index}: input={0}, expected={1}")
     @MethodSource("stringSortTestCases")
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
-    void testHasUniqueChars2(String input, String expected) {
+    void testStringSort(String input, String expected) {
         assertEquals(expected, isPermutation.sort(input),
                 "Failed for input: " + input);
+    }
+
+    @ParameterizedTest(name = "Run {index}: input={0}, expected={1}")
+    @MethodSource("stringIsPermutationTestCases")
+    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    void testStringIsPermutation1(String input1, String input2, boolean expected) {
+        assertEquals(expected, isPermutation.stringIsPermutation1(input1, input2),
+                "Failed for input: " + input1 + ", " + input2);
     }
 
 
