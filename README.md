@@ -54,12 +54,12 @@ For each problem, I follow a structured approach:
 <!-- START_PROGRESS -->
 | Topic                | Problems |
 |---------------------|----------|
-| Arrays              | 0 |
-| Strings             | 0 |
-| Linked Lists        | 0 |
-| Stacks & Queues     | 0 |
-| Trees & Graphs      | 0 |
-| Recursion           | 0 |
+| Arrays | 1 |
+| Strings | 2 |
+| Linked Lists | 0 |
+| Stacks & Queues | 0 |
+| Trees & Graphs | 0 |
+| Recursion | 0 |
 | Dynamic Programming | 0 |
 <!-- END_PROGRESS -->
 
