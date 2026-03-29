@@ -1,6 +1,4 @@
-package dsa.exercises;
-
-import java.util.*;
+package dsa.exercises.arrays;
 
 public class LargestElement {
 

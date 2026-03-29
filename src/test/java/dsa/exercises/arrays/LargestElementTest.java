@@ -1,4 +1,4 @@
-package dsa.exercises;
+package dsa.exercises.arrays;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

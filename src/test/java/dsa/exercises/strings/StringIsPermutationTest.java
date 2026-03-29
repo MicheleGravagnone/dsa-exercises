@@ -1,4 +1,4 @@
-package dsa.exercises;
+package dsa.exercises.strings;
 
 import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.params.ParameterizedTest;
