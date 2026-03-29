@@ -1,15 +1,22 @@
-package dsa.exercises;
+package dsa.exercises.strings;
 
 import java.util.*;
 
 /*
- * 1.1 Is Unique: Implement an algorithm to determine if a string has all unique characters.
- * What if you cannot use additional data structures?
- * pg90
- * */
+ * Problem: CTCI 1.1 - Is Unique
+ * Topic: Strings
+ */
 
 public class HasUniqueChars {
 
+    /*
+     * Approach:
+     * We use a HashSet to track characters from the string, when a duplicate appears
+     * we return.
+     *
+     * Time: O(n)
+     * Space: O(n)
+     */
     public boolean hasUniqueChars (String s) {
         Set<Character> charSet = new HashSet<>();
         for (char c : s.toCharArray()) {
@@ -18,11 +25,17 @@ public class HasUniqueChars {
         }
 
         return true;
-        // TIME COMPLEXITY | O(N)
-        // SPACE COMPLEXITY | 0(2N)
     }
 
-    // Assuming ASCII lowercase letters a-z
+    /*
+     * Approach:
+     * If we assume the String is made up only by lowercase ASCII characters, we can store
+     * 0/1 values in an integer (32bits in Java, enough for 26 letters) instead of creating
+     * a frequency array.
+     *
+     * Time: O(n)
+     * Space: O(1)
+     */
     public boolean hasUniqueChars1 (String s) {
         int checker = 0;
         for (int i = 0; i < s.length(); i++) {
@@ -32,8 +45,6 @@ public class HasUniqueChars {
         }
 
         return true;
-        // TIME COMPLEXITY | O(N)
-        // SPACE COMPLEXITY | O(1)
     }
 
 }
