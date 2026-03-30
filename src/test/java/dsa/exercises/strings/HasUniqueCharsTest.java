@@ -14,7 +14,7 @@ class HasUniqueCharsTest {
 
     private final HasUniqueChars uniqueChars = new HasUniqueChars();
 
-    @ParameterizedTest(name = "Run {index}: input={0}, expected={1}")
+    @ParameterizedTest(name = "Run {index}: input=\"{0}\", expected=\"{1}\"")
     @MethodSource("hasUniqueCharsTestCases")
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
     void testHasUniqueChars1(String input, boolean expected) {

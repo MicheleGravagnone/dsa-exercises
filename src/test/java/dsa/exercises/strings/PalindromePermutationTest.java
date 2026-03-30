@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PalindromePermutationTest {
     private final PalindromePermutation palindromePermutation = new PalindromePermutation();
 
-    @ParameterizedTest(name = "Run {index}: input={0}, expected={1}")
+    @ParameterizedTest(name = "Run {index}: input=\"{0}\", expected=\"{1}\"")
     @MethodSource("isPalindromePermutationTestCases")
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
     void testIsPalindromePermutation (String input, boolean expected) {
@@ -22,7 +22,7 @@ class PalindromePermutationTest {
                 "Failed for input: " + input);
     }
 
-    @ParameterizedTest(name = "Run {index}: input={0}, expected={1}")
+    @ParameterizedTest(name = "Run {index}: input=\"{0}\", expected=\"{1}\"")
     @MethodSource("isPalindromePermutationTestCases")
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
     void testIsPalindromePermutation1 (String input, boolean expected) {

@@ -14,7 +14,7 @@ class StringIsPermutationTest {
 
     private final StringIsPermutation isPermutation = new StringIsPermutation();
 
-    @ParameterizedTest(name = "Run {index}: input={0}, expected={1}")
+    @ParameterizedTest(name = "Run {index}: input=\"{0}\", \"{1}\", expected=\"{2}\"")
     @MethodSource("stringIsPermutationTestCases")
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
     void testStringIsPermutation(String input1, String input2, boolean expected) {
@@ -22,7 +22,7 @@ class StringIsPermutationTest {
                 "Failed for input: " + input1 + ", " + input2);
     }
 
-    @ParameterizedTest(name = "Run {index}: input={0}, expected={1}")
+    @ParameterizedTest(name = "Run {index}: input=\"{0}\", \"{1}\", expected=\"{2}\"")
     @MethodSource("stringSortTestCases")
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
     void testStringSort(String input, String expected) {
@@ -30,7 +30,7 @@ class StringIsPermutationTest {
                 "Failed for input: " + input);
     }
 
-    @ParameterizedTest(name = "Run {index}: input={0}, expected={1}")
+    @ParameterizedTest(name = "Run {index}: input=\"{0}\", \"{1}\", expected=\"{2}\"")
     @MethodSource("stringIsPermutationTestCases")
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
     void testStringIsPermutation1(String input1, String input2, boolean expected) {

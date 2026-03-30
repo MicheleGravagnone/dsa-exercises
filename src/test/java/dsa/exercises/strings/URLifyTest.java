@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class URLifyTest {
     private final URLify urlify = new URLify();
 
-    @ParameterizedTest(name = "Run {index}: input={0}, {1},  expected={2}")
+    @ParameterizedTest(name = "Run {index}: input=\"{0}\", \"{1}\",  expected=\"{2}\"")
     @MethodSource("replaceSpacesTestCases")
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
     void testReplaceSpaces1 (char[] input1, int input2, char[] expected) {
