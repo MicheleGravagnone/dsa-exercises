@@ -55,7 +55,7 @@ For each problem, I follow a structured approach:
 | Topic                | Problems |
 |---------------------|----------|
 | Arrays | 1 |
-| Strings | 4 |
+| Strings | 5 |
 | Linked Lists | 0 |
 | Stacks & Queues | 0 |
 | Trees & Graphs | 0 |
