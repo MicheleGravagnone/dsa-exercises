@@ -33,6 +33,7 @@ public class PalindromePermutation {
      */
 
     public boolean isPalindromePermutation (String s) {
+        if (s.isEmpty()) return false;
         int oddCount = 0;
 
         s = s.replaceAll("\\s+", "").toLowerCase();
