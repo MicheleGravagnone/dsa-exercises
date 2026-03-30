@@ -17,7 +17,7 @@ class LargestElementTest {
     @ParameterizedTest(name = "Run {index}: input={0}, expected={1}")
     @MethodSource("secondLargestTestCases")
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
-    void testSecondLargestElement(int[] input, int expected) {
+    void testSecondLargestElement (int[] input, int expected) {
         assertEquals(expected, largestElement.secondLargestElement(input),
                 "Failed for input: " + java.util.Arrays.toString(input));
     }
@@ -25,12 +25,12 @@ class LargestElementTest {
     @ParameterizedTest(name = "Run {index}: input={0}, expected={1}")
     @MethodSource("thirdLargestTestCases")
     @Timeout(value = 2, unit = TimeUnit.SECONDS)
-    void testThirdLargestElement(int[] input, int expected) {
+    void testThirdLargestElement (int[] input, int expected) {
         assertEquals(expected, largestElement.thirdLargestElement(input),
                 "Failed for input: " + java.util.Arrays.toString(input));
     }
 
-    private static Stream<Arguments> secondLargestTestCases() {
+    private static Stream<Arguments> secondLargestTestCases () {
         return Stream.of(
                 Arguments.of(new int[]{12, 35, 1, 10, 34, 1}, 12),
                 Arguments.of(new int[]{10, 5, 10}, 5),
@@ -42,7 +42,7 @@ class LargestElementTest {
         );
     }
 
-    private static Stream<Arguments> thirdLargestTestCases() {
+    private static Stream<Arguments> thirdLargestTestCases () {
         return Stream.of(
                 Arguments.of(new int[]{12, 35, 1, 10, 34, 1}, 12),
                 Arguments.of(new int[]{10, 5, 1}, 1),
