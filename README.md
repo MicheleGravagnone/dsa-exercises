@@ -54,7 +54,7 @@ For each problem, I follow a structured approach:
 <!-- START_PROGRESS -->
 | Topic                | Problems |
 |---------------------|----------|
-| Arrays | 1 |
+| Arrays | 2 |
 | Strings | 6 |
 | Linked Lists | 0 |
 | Stacks & Queues | 0 |
