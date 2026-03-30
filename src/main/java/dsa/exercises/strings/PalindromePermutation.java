@@ -52,4 +52,41 @@ public class PalindromePermutation {
         return oddCount <= 1;
     }
 
+    /*---------------------------------------------------------------------*/
+
+    /*
+     * Approach:
+     * Building upon the previous implementation, I notice that the set of characters
+     * appearing in the string is limited. Assuming only characters from standard
+     * ASCII (128) we can evaluate each character's integer value as the index of
+     * an array and reduce the overhead caused by implementing a Hashmap.
+     *
+     *
+     * Time: O(N)
+     * Space: O(1)
+     */
+
+    public boolean isPalindromePermutation1 (String s) {
+        if (s.isEmpty()) return false;
+
+        int[] charFreq = new int[128];
+        int oddCount = 0;
+
+        for (char c : s.toCharArray()) {
+            if (c == ' ') continue;
+
+            c = Character.toLowerCase(c);
+            charFreq[c]++;
+
+            if (charFreq[c] % 2 == 1) {
+                oddCount++;
+            } else {
+                oddCount--;
+            }
+        }
+
+        return oddCount <= 1;
+    }
+
+
 }

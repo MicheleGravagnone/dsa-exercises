@@ -22,6 +22,14 @@ class PalindromePermutationTest {
                 "Failed for input: " + input);
     }
 
+    @ParameterizedTest(name = "Run {index}: input={0}, expected={1}")
+    @MethodSource("isPalindromePermutationTestCases")
+    @Timeout(value = 2, unit = TimeUnit.SECONDS)
+    void testIsPalindromePermutation1 (String input, boolean expected) {
+        assertEquals (expected, palindromePermutation.isPalindromePermutation1(input),
+                "Failed for input: " + input);
+    }
+
     private static Stream<Arguments> isPalindromePermutationTestCases () {
         return Stream.of(
                 Arguments.of("eded", true),
